@@ -41,6 +41,7 @@ export default function EditForm(props) {
         event.preventDefault()
         axios.put(`http://localhost:5000/api/movies/${movie.id}`, movie)
         .then(result => {
+            console.log("put response",result)
             props.history.push("/")
         })
         .catch(error => {

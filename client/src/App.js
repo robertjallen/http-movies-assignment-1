@@ -23,7 +23,11 @@ const App = (props) => {
 
   useEffect(() => {
     getMovieList();
-  }, []);
+  }, [movieList]);
+
+  useEffect(() => {
+    getMovieList();
+  }, [savedList]);
 
   return (
     <>
